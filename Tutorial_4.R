@@ -1,4 +1,3 @@
-# John wuz here
 ##### Functions ##### 
 
 # General Form of a Function 
