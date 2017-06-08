@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1496959958718.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6B3CDA23",
+    "lastKnownWriteTime" : 1496959985,
+    "last_content_update" : 1496959985543,
+    "path" : "~/Documents/R Lessons/Tutorial_5.R",
+    "project_path" : "Tutorial_5.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

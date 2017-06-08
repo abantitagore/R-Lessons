@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "##### Logical Statements #####\n\n1 == 1 # this means is 1 is equal to 1, this is a logical comparison \n1 == 2 \n1 == '1' # this is not supposed to work because they are different classes \n12 == '12'\n\nA <- matrix(data = 1:4)\nB <- matrix(data = c(1, 2, 3 ,5), nrow = 1)\n\nA == B # this will run a logical comparison for every entry in both matricies \n\nC <- matrix(data = c(1, 2, 3 ,5), nrow = 1)\n\nA == C # this will not work because dimensions are different \n\n##### If Statements ##### \n\n# general if statement structure \n# if (logical) {\n#   do this \n# }\n\nstudents <- c('Abanti', 'John', 'Bela', 'Beyonce', 'Rihanna')\ngrades <- c(95, 59, 100, 94, 60)\n\nclass <- data.frame(students = students, grades = grades) \n\nfor (row in 1:dim(class)[1]) {\n  tmp.row <- class[row,]\n  if (tmp.row$grades == 100) {\n    msg <- paste0(tmp.row$students, ' is a God.')\n    print (msg)\n  }\n  else if (tmp.row$grades >= 90 && tmp.row$grades < 100) { # && means and, both conditions need to be met\n    msg <- paste0(tmp.row$students, ' is a genius.') # merges whatever you want with no spaces in bewteen\n    print(msg)\n  }\n  else if (tmp.row$grades >= 60) {\n    msg <- paste0(tmp.row$students, ' is not that dumb.')\n    print(msg)\n  }\n  else {\n    msg <- paste0(tmp.row$students, ' is an idiot.')\n    print(msg)\n  }\n}\n\n##### If using or #####\nstudent.extreme <- 3 \n\nif (student.extreme > 95 | student.extreme < 5) { # | means or, either one condition needs to be met\n  print('student is extreme')\n}\n\n\n##### Logical Comparisons as Numbers #####\n\nx <- 6 \ny <- 10 \nz <- 6 \n\nx.y <- x == y \nx.z <- x == z\n\n# turning the logical statements into numbers \n\nx.y <- as.numeric(x.y)\nx.z <- as.numeric(x.z)\n\nx.y \nx.z\n\n##### The Which Statement ##### \n\n# the which command helps you find variables you're looking for\np <- c(100:1)\n\nwhich (p == 20) # tells you in which location the condition is met \n\nwhich(p < 20)\n\nP <- matrix(data = 1:100, nrow = 10)\n\nwhich(P > 60)\nwhich(P > 60, arr.ind = TRUE)\n\nP.data <- as.data.frame(P) # turns P into a data frame instead of a matrix\n\nwhich(P.data > 60)\nwhich(P.data > 60, arr.ind = TRUE) # arr.ind gives the row and column values \n\n##### Combining Principles #####\n\nP.data.ind <- which(P.data > 60 & P.data <= 90, arr.ind = TRUE)\nP.data.ind <- P.data.ind [, 'col'] # gunna look for the column named column\nP.data.ind <- unique(P.data.ind) #removes all the doubles and only counts unqiue values \n\nP.data[, P.data.ind] # we want all columns but only these specific rows\n\n\n\n\n\n",
+    "created" : 1495746842900.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1069354243",
+    "id" : "85094721",
+    "lastKnownWriteTime" : 1495758734,
+    "last_content_update" : 1495758734251,
+    "path" : "~/Documents/R Lessons/Tutorial_3.R",
+    "project_path" : "Tutorial_3.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

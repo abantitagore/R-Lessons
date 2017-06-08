@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "##### The For-Loop ##### \n\nclass <- c('vijay', 'ashley', 'stephen', 'john', 'abanti', 'raj') # defining a vector \ngrades <- c(90, 52, 89, 88, 100, 92) # defining ANOTHER vector \n\ngpa.sheet <- data.frame(class, grades) # defining a dataframe \n\n# the paste command takes multiple statements and merges them together \npaste(\"student X's grade was\", gpa.sheet[4, 'grades']) # taking the fourth row from column grades in dataframe gpa sheet \n\ndim(gpa.sheet) # dimension command, gives you dimensions of whatever shit \n\n# general form of for-loop: \n# for(variable in list.of.values) {\n#   (perform operations with variabel)\n# }\n# for loop will keep going till it's run through the values of the given vector \n\ncount <- 0 \n\nfor(student in gpa.sheet [, 'class']) { \n  # inside the curly brackets we're gunna put the instructions of what we want R to do\n  # always use {} for a function like this \n  \n  count <- count + 1 # keeps track of how many times the loop is running, step not always necesssary\n  \n  tmp <- paste(student, 'had a grade of', gpa.sheet$grades[count])\n  \n  print(tmp) # R is cycling through a list and the variable gets updated with each cycle\n}\n\n\nsort(gpa.sheet$grades, decreasing = T)\n\n\n##### The While-loop ##### \n\n# general form of while loop: \n# while (logical.statement) {\n#   <do this action>\n# }\n# while will keep doing the thing until whatever conditions you set up is no longer true \n\ncount <- 0 \n\nwhile(count < 100) {\n  count <- count + 1\n  print(count)\n}\n\n\n\n\n\n\n\n\n",
+    "created" : 1495068167946.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3414831384",
+    "id" : "79162E66",
+    "lastKnownWriteTime" : 1495072955,
+    "last_content_update" : 1495072955093,
+    "path" : "~/Documents/R Lessons/Tutorial_2.R",
+    "project_path" : "Tutorial_2.R",
+    "properties" : {
+        "docOutlineVisible" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

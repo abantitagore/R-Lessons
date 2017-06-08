@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "##### Functions ##### \n\n# General Form of a Function \n# func.name <- function (whatever arguments you want the function to take) {\n\n#  instructions \n\n#  return (result) - option, tells the function what the output should be, otherwise it will be the last thing that was produced in the function \n#}\n\n#\n\ntest.func <- function(x, y) {\n  \n  vector <<- c(x, y) # <<- outputs the variable to the global workspace only if there is a variable of the same name in the global workspace \n  \n  ans <- mean(vector)\n  \n  print(paste('The mean is', ans))\n  \n  return(ans)\n\n}\n\n##### Default Value ##### \ntest.func <- function(x, y = 10) { #assumes default value of y as 10 if not specified \n  \n  vector <<- c(x, y) # <<- outputs the variable to the global workspace only if there is a variable of the same name in the global workspace \n  \n  ans <- mean(vector)\n  \n  print(paste('The mean is', ans))\n  \n  return(ans)\n  \n}\n\n##### ANOVA ##### \n# data should be structured such that all factors are in different columns\n\nsite <- c(twan02$Site, twan02$Site, twan02$Site)\nsite <- rep(twan02$Site, 3) #another way to do the above command \ndensity <- c(twan02$`50-100`, twan02$`101-150`,twan02$`151-200`)\ndepth <- c(rep(colnames(twan02) [2], 7), rep(colnames(twan02) [3], 7), rep(colnames(twan02) [4], 7))\n\ndataset <- data.frame(density, site, depth)\n\n\nabanti.is.better.than.john <- function(dataset, y, x1, x2) {\n\n  model <- paste(y, ' ~ ', x1, ' * ', x2)\n  result <- lm(formula = model, data = dataset)\n  result <- anova(result)\n  \n\n}\n\ndataset2 <- read.csv('/Users/abantitagore/Documents/R Lessons/prob2.csv') #import csv file from commandline \n\nyy <- abanti.is.better.than.john(dataset = dataset2, y = 'X', x1 = 'Method', x2 = 'Time')\n\nsource(file = '/Users/abantitagore/Documents/R Lessons/Abanti_Function.R') #call functions saved in other scripts to working script\n\n\n",
+    "created" : 1496269971256.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1586013347",
+    "id" : "93B34B54",
+    "lastKnownWriteTime" : 1496961572,
+    "last_content_update" : 1496961573155,
+    "path" : "~/Documents/R Lessons/Tutorial_4.R",
+    "project_path" : "Tutorial_4.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
